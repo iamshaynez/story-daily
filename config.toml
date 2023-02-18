@@ -1,0 +1,20 @@
+baseURL = "https://story.xiaowenz.com/"
+languageCode = "en-us"
+title = "每天一个脑洞故事"
+theme = "rocinante"
+paginate = 10
+
+[markup]
+  [markup.highlight]
+    style = "monokailight"
+  [markup.goldmark.renderer]
+    unsafe= true
+
+[params]
+  mainSections = ["posts","photos"]
+  email = "i@xiaowenz.com"
+  favicon = "icons/favicon.png"
+  about = """
+我试着每天讲一个脑洞故事给你听……
+"""
+
