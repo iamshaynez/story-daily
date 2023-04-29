@@ -95,6 +95,10 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
+    - identifier: rss
+      name: rss
+      url: /index.xml
+      weight: 5
     - identifier: categories
       name: categories
       url: /categories/
