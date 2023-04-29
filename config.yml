@@ -12,8 +12,7 @@ googleAnalytics: UA-123-45
 rssLimit: 10
 
 permalinks:
-  blog: "/:sections/:year/:month/:slug"
-
+  posts: "/:sections/:year/:month/:slug"
 
 minify:
   disableXML: true
