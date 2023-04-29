@@ -11,6 +11,10 @@ hasCJKLanguage: true
 googleAnalytics: UA-123-45
 rssLimit: 10
 
+permalinks:
+  blog: "/:sections/:year/:month/:slug"
+
+
 minify:
   disableXML: true
   minifyOutput: true
