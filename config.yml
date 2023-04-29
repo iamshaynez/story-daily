@@ -9,6 +9,7 @@ buildFuture: false
 buildExpired: false
 hasCJKLanguage: true
 googleAnalytics: UA-123-45
+rssLimit: 10
 
 minify:
   disableXML: true
@@ -123,3 +124,8 @@ outputs:
         - HTML
         - RSS
         - JSON # is necessary
+
+sitemap:
+  changefreq: always
+  filename: sitemap.xml
+  priority: 0.5
