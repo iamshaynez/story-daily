@@ -22,7 +22,7 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: 每天一个脑洞故事……
   description: "每天记录一个AI创作的小故事"
-  keywords: [AI, 脑洞故事, 写作, 创意, 人工智能, 博客]
+  keywords: ["AI", "脑洞故事", "写作", "创意", "人工智能", "博客","ChatGPT","Claude"]
   author: Me
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
@@ -99,8 +99,8 @@ menu:
       name: RSS
       url: /index.xml
       weight: 5
-    - identifier: 分类
-      name: categories
+    - identifier: categories
+      name: 分类
       url: /categories/
       weight: 10
     - identifier: search
