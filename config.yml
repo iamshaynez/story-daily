@@ -8,7 +8,6 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 hasCJKLanguage: true
-googleAnalytics: UA-123-45
 rssLimit: 10
 
 permalinks:
@@ -25,7 +24,7 @@ params:
   keywords: ["AI", "脑洞故事", "写作", "创意", "人工智能", "博客","ChatGPT","Claude"]
   author: Me
   # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
+  images: ["logo.jpg"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
@@ -50,11 +49,11 @@ params:
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "<link / abs url>"
-    favicon16x16: "<link / abs url>"
-    favicon32x32: "<link / abs url>"
-    apple_touch_icon: "<link / abs url>"
-    safari_pinned_tab: "<link / abs url>"
+    favicon: "logo.jpg"
+    favicon16x16: "logo.jpg"
+    favicon32x32: "logo.jpg"
+    apple_touch_icon: "logo.jpg"
+    safari_pinned_tab: "logo.jpg"
 
   label:
     text: "Home"
