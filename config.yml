@@ -49,11 +49,11 @@ params:
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "story_logo.jpg"
-    favicon16x16: "story_logo.jpg"
-    favicon32x32: "story_logo.jpg"
-    apple_touch_icon: "story_logo.jpg"
-    safari_pinned_tab: "story_logo.jpg"
+    favicon: "story_logo.png"
+    favicon16x16: "story_logo.png"
+    favicon32x32: "story_logo.png"
+    apple_touch_icon: "story_logo.png"
+    safari_pinned_tab: "story_logo.png"
 
   label:
     text: "Home"
