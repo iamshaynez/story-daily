@@ -24,7 +24,7 @@ params:
   keywords: ["AI", "脑洞故事", "写作", "创意", "人工智能", "博客","ChatGPT","Claude"]
   author: Me
   # author: ["Me", "You"] # multiple authors
-  images: ["logo.jpg"]
+  images: ["story_twitter_card.png"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
@@ -49,11 +49,11 @@ params:
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "logo.jpg"
-    favicon16x16: "logo.jpg"
-    favicon32x32: "logo.jpg"
-    apple_touch_icon: "logo.jpg"
-    safari_pinned_tab: "logo.jpg"
+    favicon: "story_logo.jpg"
+    favicon16x16: "story_logo.jpg"
+    favicon32x32: "story_logo.jpg"
+    apple_touch_icon: "story_logo.jpg"
+    safari_pinned_tab: "story_logo.jpg"
 
   label:
     text: "Home"
