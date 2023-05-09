@@ -62,7 +62,7 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "你好人类 \U0001F44B"
+    Title: "人类，你好 \U0001F44B"
     Content: 这里是基于人工智能的故事博客，算力允许的情况下，每一天试着创造一个小故事……本博客内容不含人类成分，纯硅基生命撰写。
 
   socialIcons:
