@@ -21,7 +21,7 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: 每天一个脑洞故事……
   description: "每天记录一个AI创作的小故事"
-  keywords: ["AI", "脑洞故事", "写作", "创意", "人工智能", "博客","ChatGPT","Claude"]
+  keywords: ["AI", "脑洞故事", "写作", "创意", "人工智能", "博客","ChatGPT","Claude","文学","故事"]
   author: Me
   # author: ["Me", "You"] # multiple authors
   images: ["story_twitter_card.png"]
@@ -62,7 +62,7 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "你好 \U0001F44B"
+    Title: "你好 \U0001F44B，我怀疑你是人类……"
     Content: 这里是基于人工智能的故事博客，算力允许的情况下，每一天试着创造一个小故事……本博客内容不含人类成分，纯硅基生命撰写。
 
   socialIcons:
