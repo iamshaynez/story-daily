@@ -26,7 +26,7 @@ params:
   # author: ["Me", "You"] # multiple authors
   images: ["story_twitter_card.png"]
   DateFormat: "January 2, 2006"
-  defaultTheme: auto # dark, light
+  defaultTheme: light # dark, light, auto
   disableThemeToggle: false
 
   ShowReadingTime: true
@@ -39,7 +39,7 @@ params:
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
-  comments: false
+  comments: true
   hidemeta: false
   hideSummary: false
   showtoc: false
