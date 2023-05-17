@@ -1,6 +1,6 @@
 baseURL: "https://storywith.in/"
 title: 每天一个脑洞故事……
-paginate: 5
+paginate: 12
 theme: PaperMod
 
 enableRobotsTXT: true
