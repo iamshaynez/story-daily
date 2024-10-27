@@ -44,7 +44,10 @@ params:
   hideSummary: false
   showtoc: false
   tocopen: false
-
+  mainSections: 
+    - post
+    - posts
+    - blog
 
   assets:
     # disableHLJS: true # to disable highlight.js
