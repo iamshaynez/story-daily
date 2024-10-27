@@ -78,7 +78,8 @@ def generate_article():
         "HTTP-Referer": "https://storywith.in", # Optional, for including your app on openrouter.ai rankings.
         "X-Title": "Story Within", # Optional. Shows in rankings on openrouter.ai.
     },
-    model="qwen/qwen-2.5-72b-instruct",
+    #model="qwen/qwen-2.5-72b-instruct",
+    model="anthropic/claude-3.5-sonnet",
     messages=[
         {
         "role": "user",
@@ -182,7 +183,7 @@ def batch_process(from_date=datetime.now(), to_date=datetime.now()):
 
 
 if __name__ == "__main__":
-    str_from = "2024-01-01"
+    str_from = "2024-03-10"
     str_to = "2024-07-31"
     from_date=datetime.strptime(str_from, '%Y-%m-%d')
     to_date=datetime.strptime(str_to, '%Y-%m-%d')
