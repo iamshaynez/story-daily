@@ -152,8 +152,17 @@ def save_article(content, use_date=datetime.now()):
     dir_path = f"./content/posts/{year}"
     os.makedirs(dir_path, exist_ok=True)
     
-    # 文件完整路径
-    file_path = f"{dir_path}/{date}.md"
+    # 检查文件是否存在，如果存在则添加后缀
+    counter = 0
+    while True:
+        if counter == 0:
+            file_path = f"{dir_path}/{date}.md"
+        else:
+            file_path = f"{dir_path}/{date}-{counter:02d}.md"
+            
+        if not os.path.exists(file_path):
+            break
+        counter += 1
     
     try:
         with open(file_path, 'w', encoding='utf-8') as f:
@@ -179,12 +188,14 @@ def batch_process(from_date=datetime.now(), to_date=datetime.now()):
     while current_date <= to_date:
         print(f'Process Date: {current_date.strftime("%Y-%m-%d")}')
         process(current_date)
+        process(current_date)
+        process(current_date)
         current_date += timedelta(days=1)
 
 
 if __name__ == "__main__":
-    str_from = "2024-03-10"
-    str_to = "2024-07-31"
+    str_from = "2024-10-27"
+    str_to = "2024-10-28"
     from_date=datetime.strptime(str_from, '%Y-%m-%d')
     to_date=datetime.strptime(str_to, '%Y-%m-%d')
 
