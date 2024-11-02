@@ -18,6 +18,7 @@ minify:
   minifyOutput: true
 
 params:
+  social: true
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: 每天一个脑洞故事……
   description: "每天记录一个AI创作的小故事"

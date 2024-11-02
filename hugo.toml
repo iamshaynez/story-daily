@@ -1,0 +1,133 @@
+baseURL = "https://storywith.in/"
+title = "每天一个脑洞故事……"
+paginate = 12
+theme = "PaperMod"
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+hasCJKLanguage = true
+rssLimit = 10
+pygmentsUseClasses = true
+
+[permalinks]
+posts = "/:sections/:year/:month/:slug"
+
+[minify]
+disableXML = true
+minifyOutput = true
+
+[params]
+social = true
+env = "production"
+title = "每天一个脑洞故事……"
+description = "每天记录一个AI创作的小故事"
+keywords = [
+  "AI",
+  "脑洞故事",
+  "写作",
+  "创意",
+  "人工智能",
+  "博客",
+  "ChatGPT",
+  "Claude",
+  "文学",
+  "故事"
+]
+author = "Me"
+images = [ "story_twitter_card.png" ]
+DateFormat = "January 2, 2006"
+defaultTheme = "light"
+disableThemeToggle = false
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = false
+ShowWordCount = true
+ShowRssButtonInSectionTermList = true
+UseHugoToc = true
+disableSpecial1stPost = false
+disableScrollToTop = false
+comments = true
+hidemeta = false
+hideSummary = false
+showtoc = false
+tocopen = false
+mainSections = [ "post", "posts", "blog" ]
+
+  [params.assets]
+  favicon = "story_logo.png"
+  favicon16x16 = "story_logo.png"
+  favicon32x32 = "story_logo.png"
+  apple_touch_icon = "story_logo.png"
+  safari_pinned_tab = "story_logo.png"
+
+  [params.label]
+  text = "Home"
+  icon = ""
+  iconHeight = 35
+
+  [params.homeInfoParams]
+  Title = "人类，你好 👋"
+  Content = "这里是基于人工智能的故事博客，算力允许的情况下，每一天试着创造一个小故事……本博客内容不含人类成分，纯硅基生命撰写。"
+
+  [[params.socialIcons]]
+  name = "twitter"
+  url = "https://twitter.com/iamshaynez"
+
+  [params.cover]
+  hidden = true
+  hiddenInList = true
+  hiddenInSingle = true
+  image = "story_twitter_card.png"
+
+  [params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1_000
+  threshold = 0.4
+  minMatchCharLength = 0
+  keys = [ "title", "permalink", "summary", "content" ]
+
+[[menu.main]]
+identifier = "rss"
+name = "RSS"
+url = "/index.xml"
+weight = 5
+
+[[menu.main]]
+identifier = "categories"
+name = "分类"
+url = "/categories/"
+weight = 10
+
+[[menu.main]]
+identifier = "search"
+name = "搜索"
+url = "/search/"
+weight = 15
+
+[[menu.main]]
+identifier = "tags"
+name = "标签"
+url = "/tags/"
+weight = 20
+
+[[menu.main]]
+identifier = "author"
+name = "我是谁"
+url = "https://xiaowenz.com"
+weight = 30
+
+[markup.highlight]
+noClasses = false
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
+[sitemap]
+changefreq = "always"
+filename = "sitemap.xml"
+priority = 0.5
