@@ -2,16 +2,28 @@ from openai import OpenAI
 from os import getenv
 import os
 from datetime import datetime,timedelta
+from concurrent.futures import ThreadPoolExecutor
+import threading
+import math
 import pandas as pd
 import re
 import random
 from dotenv import load_dotenv
 load_dotenv()
 # gets API Key from environment variable OPENAI_API_KEY
+# gets API Key from environment variable OPENAI_API_KEY
 client = OpenAI(
-  base_url="https://openrouter.ai/api/v1",
-  api_key=os.environ["OPENROUTER_KEY"],
+  base_url=os.environ["TZ_API"],
+  api_key=os.environ["TZ_KEY"],
 )
+
+# OPENROUTER MODEL
+#MODEL='anthropic/claude-3.5-sonnet'
+
+# TZ MODEL
+# MODEL='tuzi-claude35-sonnet-20240620'
+MODEL='gpt-4o-2024-08-06'
+
 
 # 对 Prompt 进行建模
 # - 关键字 1
@@ -79,7 +91,7 @@ def generate_article():
         "X-Title": "Story Within", # Optional. Shows in rankings on openrouter.ai.
     },
     #model="qwen/qwen-2.5-72b-instruct",
-    model="anthropic/claude-3.5-sonnet",
+    model=MODEL,
     messages=[
         {
         "role": "user",
@@ -193,10 +205,49 @@ def batch_process(from_date=datetime.now(), to_date=datetime.now()):
         current_date += timedelta(days=1)
 
 
+
+def process_date_range(start_date, end_date):
+    current_date = start_date
+    while current_date <= end_date:
+        print(f'Thread {threading.current_thread().name} processing date: {current_date.strftime("%Y-%m-%d")}')
+        process(current_date)
+
+        current_date += timedelta(days=1)
+
+def batch_process_multi_thread(from_date=datetime.now(), to_date=datetime.now(), num_threads=4):
+    # 计算总天数
+    total_days = (to_date - from_date).days + 1
+    
+    # 计算每个线程处理的天数
+    days_per_thread = math.ceil(total_days / num_threads)
+    
+    # 创建线程池
+    with ThreadPoolExecutor(max_workers=num_threads) as executor:
+        futures = []
+        
+        # 为每个线程分配日期范围
+        for i in range(num_threads):
+            start = from_date + timedelta(days=i * days_per_thread)
+            end = min(from_date + timedelta(days=(i + 1) * days_per_thread - 1), to_date)
+            
+            # 如果起始日期已经超过结束日期，就不再创建新线程
+            if start > to_date:
+                break
+                
+            # 提交线程任务
+            future = executor.submit(process_date_range, start, end)
+            futures.append(future)
+        
+        # 等待所有线程完成
+        for future in futures:
+            future.result()
+
+
 if __name__ == "__main__":
-    str_from = "2024-11-02"
-    str_to = "2024-11-02"
+    str_from = "2023-01-01"
+    str_to = "2023-02-15"
     from_date=datetime.strptime(str_from, '%Y-%m-%d')
     to_date=datetime.strptime(str_to, '%Y-%m-%d')
 
-    batch_process(from_date, to_date)
+    #batch_process(from_date, to_date)
+    batch_process_multi_thread(from_date, to_date, num_threads=10)

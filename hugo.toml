@@ -1,6 +1,6 @@
 baseURL = "https://storywith.in/"
 title = "每天一个脑洞故事……"
-paginate = 12
+paginate = 20
 theme = "PaperMod"
 enableRobotsTXT = true
 buildDrafts = false
