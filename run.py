@@ -13,8 +13,8 @@ load_dotenv()
 # gets API Key from environment variable OPENAI_API_KEY
 # gets API Key from environment variable OPENAI_API_KEY
 client = OpenAI(
-  base_url=os.environ["TZ_API"],
-  api_key=os.environ["TZ_KEY"],
+  base_url=os.environ["X_API"],
+  api_key=os.environ["X_KEY"],
 )
 
 # OPENROUTER MODEL
@@ -22,8 +22,10 @@ client = OpenAI(
 
 # TZ MODEL
 # MODEL='tuzi-claude35-sonnet-20240620'
-MODEL='gpt-4o-2024-08-06'
+#MODEL='gpt-4o-2024-08-06'
 
+# X Grok
+MODEL='grok-beta'
 
 # 对 Prompt 进行建模
 # - 关键字 1
@@ -244,8 +246,8 @@ def batch_process_multi_thread(from_date=datetime.now(), to_date=datetime.now(),
 
 
 if __name__ == "__main__":
-    str_from = "2021-01-01"
-    str_to = "2021-12-31"
+    str_from = "2024-11-03"
+    str_to = "2024-11-04"
     from_date=datetime.strptime(str_from, '%Y-%m-%d')
     to_date=datetime.strptime(str_to, '%Y-%m-%d')
 
