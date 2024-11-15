@@ -246,8 +246,8 @@ def batch_process_multi_thread(from_date=datetime.now(), to_date=datetime.now(),
 
 
 if __name__ == "__main__":
-    str_from = "2024-11-05"
-    str_to = "2024-11-09"
+    str_from = "2024-11-10"
+    str_to = "2024-11-15"
     from_date=datetime.strptime(str_from, '%Y-%m-%d')
     to_date=datetime.strptime(str_to, '%Y-%m-%d')
 
